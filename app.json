@@ -1,0 +1,10 @@
+{
+    "name": "sketchbook",
+    "description": "Day to Day SketchBook",
+    "keywords": [
+        "bookslibro",
+        "go"
+    ],
+    "image": "heroku/go:1.6",
+    "mount_dir": "src/main"
+}
