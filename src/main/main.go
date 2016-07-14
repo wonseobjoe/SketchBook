@@ -4,6 +4,7 @@ import (
 	//"sketchbook.org/web/example"
 	"net/http"
 	"os"
+	"log"
 
 	"sketchbook.org/web"
 )
