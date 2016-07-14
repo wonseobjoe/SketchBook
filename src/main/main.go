@@ -3,6 +3,7 @@ package main
 import (
 	//"sketchbook.org/web/example"
 	"net/http"
+
 	"sketchbook.org/web"
 )
 
@@ -14,5 +15,5 @@ func main() {
 	http.Handle("/fonts/", new(web.StaticHandler))
 	http.Handle("/js/", new(web.StaticHandler))
 	http.HandleFunc("/", web.IndexHandler)
-	http.ListenAndServe(":80", nil)
+	http.ListenAndServe(":8080", nil)
 }
