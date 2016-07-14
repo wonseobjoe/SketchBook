@@ -1,1 +1,1 @@
-web: bin/main -port 7070
+web: ./bin/main -port 7070
