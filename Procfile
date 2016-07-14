@@ -1,1 +1,1 @@
-web: SketchBook
+web: main
