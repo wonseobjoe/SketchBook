@@ -15,5 +15,5 @@ func main() {
 	http.Handle("/fonts/", new(web.StaticHandler))
 	http.Handle("/js/", new(web.StaticHandler))
 	http.HandleFunc("/", web.IndexHandler)
-	http.ListenAndServe(":80", nil)
+	http.ListenAndServe(":7070", nil)
 }
