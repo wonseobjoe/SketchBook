@@ -1,6 +1,6 @@
 GO_BUILD_ENV := GOOS=linux GOARCH=amd64
 DOCKER_BUILD=$(shell pwd)/.docker_build
-DOCKER_CMD=$(DOCKER_BUILD)/SketchBook
+DOCKER_CMD=$(DOCKER_BUILD)/cafelivro
 
 $(DOCKER_CMD): clean
 	mkdir -p $(DOCKER_BUILD)
