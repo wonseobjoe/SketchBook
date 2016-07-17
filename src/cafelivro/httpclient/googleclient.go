@@ -1,9 +1,6 @@
 package httpclient
 
-import (
-	"io/ioutil"
-	"net/http"
-)
+import ()
 
 const (
 	GoogleUrl = "https://google.search.com/v1/search/"
