@@ -80,7 +80,7 @@
 		
 		
 		
-		// 메뉴 클릭 추가
+		// 메뉴 클릭 추가  !!!
 		var  news = document.getElementById( 'news' );
 		news.addEventListener( clickevent, function( ev ) {
 			alert("news");
