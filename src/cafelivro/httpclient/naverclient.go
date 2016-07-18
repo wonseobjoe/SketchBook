@@ -13,6 +13,7 @@ const (
 )
 
 func Execute() {
+	pritnln("execute")
 	xml, statuscode := GetNaverSearchResultXml("news", "이대호", "1", "1", "sim")
 
 	println(statuscode)
