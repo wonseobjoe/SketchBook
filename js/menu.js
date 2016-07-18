@@ -42,7 +42,7 @@
 			perspectiveWrapper = document.getElementById( 'perspective' ),
 			container = perspectiveWrapper.querySelector( '.container' ),
 			contentWrapper = container.querySelector( '.wrapper' );
-
+		
 		showMenu.addEventListener( clickevent, function( ev ) {
 			ev.stopPropagation();
 			ev.preventDefault();
@@ -77,6 +77,33 @@
 				classie.remove( perspectiveWrapper, 'animate' );
 			}
 		});
+		
+		
+		
+		// 메뉴 클릭 추가
+		var  news = document.getElementById( 'news' );
+		news.addEventListener( clickevent, function( ev ) {
+			alert("news");
+			if( classie.has( perspectiveWrapper, 'animate') ) {
+				var onEndTransFn = function( ev ) {
+					if( support && ( ev.target.className !== 'container' || ev.propertyName.indexOf( 'transform' ) == -1 ) ) return;
+					this.removeEventListener( transEndEventName, onEndTransFn );
+					classie.remove( perspectiveWrapper, 'modalview' );
+					// mac chrome issue:
+					document.body.scrollTop = document.documentElement.scrollTop = docscroll;
+					// change top of contentWrapper
+					contentWrapper.style.top = '0px';
+				};
+				if( support ) {
+					perspectiveWrapper.addEventListener( transEndEventName, onEndTransFn );
+				}
+				else {
+					onEndTransFn.call();
+				}
+				classie.remove( perspectiveWrapper, 'animate' );
+			}
+		});
+		
 
 		perspectiveWrapper.addEventListener( clickevent, function( ev ) { return false; } );
 	}
