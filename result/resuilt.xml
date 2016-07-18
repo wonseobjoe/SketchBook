@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<rss version="2.0">
+	<channel>
+		<title>Naver Open API - news ::'이대호'</title>
+		<link>http://search.naver.com</link>
+		<description>Naver Search Result</description>
+		<lastBuildDate>Mon, 18 Jul 2016 18:20:39 +0900</lastBuildDate>
+		<total>163402</total>
+		<start>1</start>
+		<display>1</display>
+		<item>
+			<title>&lt;b&gt;이대호&lt;/b&gt;, 확실한 주전 자리 잡나?… 린드 트레이드설 제기</title>
+			<originallink>http://sports.donga.com/3/all/20160718/79258710/2
+			</originallink>
+			<link>http://openapi.naver.com/l?AAAB1LwQ6CMBT7mseRDDaWtwMHxwYePBijH7DIFBPZcAyIfr3TpmmbNn0tNrxr0A0IBZKBloANIAGtQCBIzIZgb/UQ4wR0B2WbOE8+xDl3dktiVhvyqx9Tf7fOBvNM6TclC9b0uRsc0NY/eqCKYgklN/9MEhgiZ1UW64JxREo5FUhoNtbFdlkqK7uFfNQ5rkdx2J86LSeHPl2/PyC7ArUAAAA=
+			</link>
+			<description>&lt;b&gt;이대호&lt;/b&gt;. ⓒGettyimages/이매진스 [동아닷컴] 마이너리그
+				계약으로 미국 무대에 진출한 &lt;b&gt;이대호&lt;/b&gt;(34, 시애틀 매리너스)가 확실한 주전 자리를
+				차지하게 될까? 아담 린드(33)의 트레이드설이 제기됐다. 미국 스포츠 전문... </description>
+			<pubDate>Mon, 18 Jul 2016 16:56:00 +0900</pubDate>
+		</item>
+	</channel>
+</rss>
+
