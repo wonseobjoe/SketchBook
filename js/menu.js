@@ -80,7 +80,7 @@
 		
 		
 		
-		// 뉴스 메뉴 클릭 추가  !!!!!!!
+		// 뉴스 메뉴 클릭 추가 한다  !!!!!!!
 		var  news = document.getElementById( 'news' );
 		news.addEventListener( clickevent, function( ev ) {
 			alert("news");
