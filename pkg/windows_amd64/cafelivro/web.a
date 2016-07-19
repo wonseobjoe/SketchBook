@@ -1,7 +1,7 @@
 !<arch>
 __.PKGDEF       0           0     0     644     58339     `
-go object windows amd64 go1.6.2 X:none
-build id "669d45b69b06796d6b65afc1300425d958ec3d60"
+go object windows amd64 go1.6.3 X:none
+build id "d925bd7b3fc086ce241359c3e6314df99b715767"
 
 $$
 package web
@@ -423,7 +423,7 @@ package web
 
 $$
  _go_.o          0           0     0     644     25513     `
-go object windows amd64 go1.6.2 X:none
+go object windows amd64 go1.6.3 X:none
 
 !
   go13ldhtml/template.aio/ioutil.anet/http.apath/filepath.a,cafelivro/httpclient.a ş""".renderTemplate      eH‹%(   H‹‰    H;a†h  HƒìxH    H‰$H‹œ$€   H‰\$H‹œ$ˆ   H‰\$è    H‹\$H‰\$XH‹\$ H‰\$`HÇ$    H‹œ$   H‰\$H‹œ$˜   H‰\$H    H‰\$HÇD$    è    H\$(H|$H‰ŞH‹H‰H‹NH‰OH‹    H‰$H‹\$XH‰\$H‹\$`H‰\$H‹œ$    H‰\$(H‹œ$¨   H‰\$0è    H‹\$8H‰\$HH‹\$@H‰\$PH‹\$HHƒû tiH‹\$PH‰$H‹\$HHƒû tZH‹[ ÿÓH‹\$H‰\$hH‹\$H‰\$pH‹œ$€   H‰$H‹œ$ˆ   H‰\$H‹\$hH‰\$H‹\$pH‰\$HÇD$ ô  è    HƒÄxÃ‰ë¢è    étşÿÿÌÌÌÌ      B  type.io.Writer   ˆ  runtime.convI2I   ‚  "go.string.".html"   ¨  *runtime.concatstring2   ì  "".templates   Ú  Rhtml/template.(*Template).ExecuteTemplate   Ğ       ê  net/http.Error   †  0runtime.morestack_noctxt   `ğ  "".autotmp_0001 ?type.io.Writer "".autotmp_0000 type.string "".err _type.error "".p @"type.interface {} "".tmpl  type.string "".w  8type.net/http.ResponseWriter  ğßïğï   çi  CPY¤ TgclocalsÂ·7c7eaee5d6084e3e0cec30f2ec56c172 TgclocalsÂ·51ac8f29737f4f7f983eb848f75125ce   vD:/Source/goworkspace/cafelivro/src/cafelivro/web/common.goş:"".(*StaticHandler).ServeHTTP  à  àeH‹%(   H‹‰    HD$ĞH;A†Â  Hì°   HÇ$    H    H‰\$HÇD$   H‹´$Ğ   Hƒş „…  H‹^Hƒû „p  Hk8H|$H‰îH‹H‰H‹NH‰Oè    H‹\$(H‰\$@H‹\$0H‰\$HH‹\$@H‰$H‹\$HH‰\$è    H‹\$H‰œ$€   H‹\$H‰œ$ˆ   H‹\$ H‰œ$   H‹\$(H‰\$PH‹\$0H‰\$XH‹\$PHƒû „ğ   HÇD$”  H‹œ$È   H‰$H‹œ$À   Hƒû „Â   H‹[0ÿÓHÇ$”  è    H‹\$H‰\$pH‹\$H‰\$xHÇ$    H‹\$pH‰\$H‹\$xH‰\$è    H‹\$H‰œ$˜   H‹\$ H‰œ$    H‹\$(H‰œ$¨   H‹œ$˜   H‰\$H‹œ$    H‰\$H‹œ$¨   H‰\$H‹œ$È   H‰$H‹œ$À   Hƒû tH‹[(ÿÓHÄ°   Ã‰ëî‰é7ÿÿÿH‹\$@H‰$H‹\$HH‰\$è    H‹\$H‰\$`H‹\$H‰\$hH‹œ$È   H‰$H‹œ$À   Hƒû „š   H‹[ ÿÓH‹\$H‰\$8H‹\$8H‰$H    H‰\$HÇD$   H‹\$`H‰\$H‹\$hH‰\$ è    H‹œ$€   H‰\$H‹œ$ˆ   H‰\$H‹œ$   H‰\$H‹œ$È   H‰$H‹œ$À   Hƒû tH‹[(ÿÓHÄ°   Ã‰ëî‰é_ÿÿÿ‰é‰ıÿÿ‰étıÿÿè    éıÿÿÌÌÌÌÌ      b  go.string."."   ü  *runtime.concatstring2   Ô  $io/ioutil.ReadFile   Æ       Ü  &net/http.StatusText   Æ  2runtime.stringtoslicebyte   ¦       ø  """.getContentType   ì       œ	  0go.string."Content-Type"   ê	  &net/http.Header.Add   ü

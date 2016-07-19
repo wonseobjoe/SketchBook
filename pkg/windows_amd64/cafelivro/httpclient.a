@@ -1,7 +1,7 @@
 !<arch>
 __.PKGDEF       0           0     0     644     59263     `
-go object windows amd64 go1.6.2 X:none
-build id "ca7e2f7abfe8d5ad0c3589a7029b9665dbd87e91"
+go object windows amd64 go1.6.3 X:none
+build id "ba92c63ecc16e967a2e5154a070e3dafcbacae48"
 
 $$
 package httpclient
@@ -427,7 +427,7 @@ package httpclient
 
 $$
  _go_.o          0           0     0     644     13335     `
-go object windows amd64 go1.6.2 X:none
+go object windows amd64 go1.6.3 X:none
 
 !
   go13ld<github.com/basgys/goxml2json.aio/ioutil.anet/http.a þ"".Execute   	   	eH‹%(   H‹‰    HD$èH;A†#  Hì˜   è    H    H‰$HÇD$   è    è    è    H    H‰$HÇD$   H    H‰\$HÇD$	   H    H‰\$ HÇD$(   H    H‰\$0HÇD$8   H    H‰\$@HÇD$H   è    H‹\$PH‰\$xH‹\$XH‰œ$€   H‹\$`H‰\$pè    H‹\$pH‰$è    è    è    è    H    H‰$HÇD$   è    è    H‹\$xH‰$H‹œ$€   H‰\$è    è    è    H    H‰$HÇD$   H    H‰\$HÇD$	   H    H‰\$ HÇD$(   H    H‰\$0HÇD$8   H    H‰\$@HÇD$H   è    H‹\$PH‰œ$ˆ   H‹\$XH‰œ$   H‹\$`H‰\$hè    H‹\$hH‰$è    è    è    è    H    H‰$HÇD$   è    è    H‹œ$ˆ   H‰$H‹œ$   H‰\$è    è    è    HÄ˜   Ãè    é´ýÿÿÌÌÌÌR      N  "runtime.printlock   \  &go.string."execute"   €  &runtime.printstring   Š  runtime.printnl   ”  &runtime.printunlock   ¢   go.string."news"   Ê  *go.string."ì´ëŒ€í˜¸"   ô  go.string."1"   ž  go.string."2"   È  go.string."sim"   î  4"".GetNaverSearchResultXml   º  "runtime.printlock   Ö   runtime.printint   à  runtime.printnl   ê  &runtime.printunlock   ô  "runtime.printlock   ‚  go.string."xml"   ¦  &runtime.printstring   °  runtime.printsp   æ  &runtime.printstring   ð  runtime.printnl   ú  &runtime.printunlock   ˆ   go.string."news"   °  *go.string."ì´ëŒ€í˜¸"   Ú  go.string."1"   „  go.string."2"   ®  go.string."sim"   Ô  6"".GetNaverSearchResultJson   ¦  "runtime.printlock   Â   runtime.printint   Ì  runtime.printnl   Ö  &runtime.printunlock   à  "runtime.printlock   î   go.string."json"   ’  &runtime.printstring   œ  runtime.printsp   Ø  &runtime.printstring   â  runtime.printnl   ì  &runtime.printunlock   †	  0runtime.morestack_noctxt    °  "".statuscode2 _type.int "".json type.string "".statuscode Otype.int "".xml ?type.string &°›¯ Ð . &(ŽH‘K  &¶V Y% TgclocalsÂ·7d2d5fca80364273fb07d5820a76fef4 TgclocalsÂ·0f976e590c2193ea3cbcc4d997cd3f2d   ŽD:/Source/goworkspace/cafelivro/src/cafelivro/httpclient/naverclient.goþ4"".GetNaverSearchResultXml  €  €eH‹%(   H‹‰    HD$ØH;A†  Hì¨   1ÛH‰œ$   H‰œ$  HÇ„$      H‹œ$°   H‰$H‹œ$¸   H‰\$H‹œ$À   H‰\$H‹œ$È   H‰\$H‹œ$Ð   H‰\$ H‹œ$Ø   H‰\$(H‹œ$à   H‰\$0H‹œ$è   H‰\$8H‹œ$ð   H‰\$@H‹œ$ø   H‰\$Hè    H‹\$PH‰\$hH‹\$XH‰œ$€   H‹\$`H‰œ$ˆ   H‹œ$€   Hƒû tKè    H    H‰$HÇD$
