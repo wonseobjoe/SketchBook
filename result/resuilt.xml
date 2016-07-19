@@ -1,25 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <rss version="2.0">
 	<channel>
 		<title>Naver Open API - news ::'이대호'</title>
 		<link>http://search.naver.com</link>
 		<description>Naver Search Result</description>
-		<lastBuildDate>Mon, 18 Jul 2016 18:20:39 +0900</lastBuildDate>
-		<total>163402</total>
+		<lastBuildDate>Wed, 20 Jul 2016 06:11:30 +0900</lastBuildDate>
+		<total>165017</total>
 		<start>1</start>
-		<display>1</display>
+		<display>2</display>
 		<item>
-			<title>&lt;b&gt;이대호&lt;/b&gt;, 확실한 주전 자리 잡나?… 린드 트레이드설 제기</title>
-			<originallink>http://sports.donga.com/3/all/20160718/79258710/2
+			<title>&lt;b&gt;이대호&lt;/b&gt;, USA투데이 신인왕 투표 4위</title>
+			<originallink>http://www.osen.co.kr/article/G1110459327
 			</originallink>
-			<link>http://openapi.naver.com/l?AAAB1LwQ6CMBT7mseRDDaWtwMHxwYePBijH7DIFBPZcAyIfr3TpmmbNn0tNrxr0A0IBZKBloANIAGtQCBIzIZgb/UQ4wR0B2WbOE8+xDl3dktiVhvyqx9Tf7fOBvNM6TclC9b0uRsc0NY/eqCKYgklN/9MEhgiZ1UW64JxREo5FUhoNtbFdlkqK7uFfNQ5rkdx2J86LSeHPl2/PyC7ArUAAAA=
+			<link>http://openapi.naver.com/l?AAAB1Myw6CMBD8muVIlpbU9tCDUEg0ys2Dx0arkEDBUmv4e1eTybw2O6+3C5uGpgZloCqhqUDWIBEaA0pCJbM+uIfuY1yA74G1hHWZQ1xz7z5ENrmQ3+aJ+qfzLtiR3O9EEpy95773wNt5uAM3BSpgwv49InIuEAVmURelkEowoZBxlk262KUtmSTOkWYOVzUOrr50hsKRnTqk9y/6hkF2uQAAAA==
 			</link>
-			<description>&lt;b&gt;이대호&lt;/b&gt;. ⓒGettyimages/이매진스 [동아닷컴] 마이너리그
-				계약으로 미국 무대에 진출한 &lt;b&gt;이대호&lt;/b&gt;(34, 시애틀 매리너스)가 확실한 주전 자리를
-				차지하게 될까? 아담 린드(33)의 트레이드설이 제기됐다. 미국 스포츠 전문... </description>
-			<pubDate>Mon, 18 Jul 2016 16:56:00 +0900</pubDate>
+			<description>기대 이상의 시즌을 보내고 있는 &lt;b&gt;이대호&lt;/b&gt;(34·시애틀)가 미 유력
+				언론의 모의 신인왕 투표에서 4위에... &lt;b&gt;이대호&lt;/b&gt;는 아메리칸리그 신인앙 투표에서 4위에
+				올랐다. 1위에 5점, 2위에 3점, 3위에 1점을 주는 방식으로 진행된... </description>
+			<pubDate>Wed, 20 Jul 2016 05:55:00 +0900</pubDate>
+		</item>
+		<item>
+			<title>위상 역전된 코리안 메이저리거 두 거포 ‘&lt;b&gt;이대호&lt;/b&gt;·박병호’</title>
+			<originallink>http://news.kmib.co.kr/article/view.asp?arcid=0923589497&amp;code=12110000&amp;cp=nv
+			</originallink>
+			<link>http://openapi.naver.com/l?AAAC1MwQ6CMBT7mseRPLYxtwMHYOzsQcHrIlMgMnBMjH/vTEyatmnTPl/WfwpoapAKKgZNBaIGgdAokAIqkQze3oohhBVoCURHbOviw5Y6+45kduvT6zLH/G6d9eYR3a+K4q3pUzc4oHoZe6AKMQfCzd8jSoLIsiQUGeNCcsIlEkqSuQiX8xEn3arQ7S3V3XSKd+MhrwXryzj+AsOSrc23AAAA
+			</link>
+			<description>&lt;b&gt;이대호&lt;/b&gt;(34·시애틀 매리너스)와 박병호(30·미네소타 트윈스)
+				얘기다. &lt;b&gt;이대호&lt;/b&gt;는 대기만성(大器晩成)형 성장곡선을 그린 반면, 박병호는 마이너리거로
+				전락해 용두사미(龍頭蛇尾)로 점철됐다. &lt;b&gt;이대호&lt;/b&gt;는 19일 미국...
+			</description>
+			<pubDate>Tue, 19 Jul 2016 18:24:00 +0900</pubDate>
 		</item>
 	</channel>
 </rss>
-

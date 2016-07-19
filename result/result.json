@@ -2,20 +2,29 @@
 	"rss": {
 		"-version": "2.0",
 		"channel": {
-			"display": "1",
-			"item": {
-				"description": "\u003cb\u003e이대호\u003c/b\u003e. ⓒGettyimages/이매진스 [동아닷컴] 마이너리그 계약으로 미국 무대에 진출한 \u003cb\u003e이대호\u003c/b\u003e(34, 시애틀 매리너스)가 확실한 주전 자리를 차지하게 될까? 아담 린드(33)의 트레이드설이 제기됐다. 미국 스포츠 전문... ",
-				"pubDate": "Mon, 18 Jul 2016 16:56:00 +0900",
-				"title": "\u003cb\u003e이대호\u003c/b\u003e, 확실한 주전 자리 잡나?… 린드 트레이드설 제기",
-				"originallink": "http://sports.donga.com/3/all/20160718/79258710/2",
-				"link": "http://openapi.naver.com/l?AAAB1Myw6CMBD8muVIoK24HHqwFC4egAuJ3ipUayIFS/Hx9xYnk53JTHaeq3ZfDmUBuQTBoBSABWACpYQcQWBknL5y4/0M9ACkClzmyfkltvodjnppF/fTGPKbttqpR3BbFcRpNcTWWKDVdB+ASooESKb+PglgiBnbRZ6nLEOkLKUJwX008nUbqbHpGnXuWHs066XuxSJPhHza8PwDcGxzF7cAAAA="
-			},
+			"lastBuildDate": "Wed, 20 Jul 2016 06:11:30 +0900",
+			"total": "165017",
+			"start": "1",
+			"display": "2",
+			"item": [
+				{
+					"originallink": "http://www.osen.co.kr/article/G1110459327",
+					"link": "http://openapi.naver.com/l?AAAB1MzQ6DIBh7ms+j+QRD4MBB/DnsapZlRzJRXBQU2czefmxJ0zZt2v1lwkdCW4NoQJXQKuA1cIS2AcFB8cwGM0ob4wa0AtIlHJsP8cidORPptwn5w68pn4wzQS/J/aokweghd9YB7fw8AG0KFECY/ntEpJQhMsyiLErGBSNMIGE8W2WHs9eXcX1Wo7J9X9+HdLfc9vN6TDyNv4luX+G3AAAA",
+					"description": "기대 이상의 시즌을 보내고 있는 \u003cb\u003e이대호\u003c/b\u003e(34·시애틀)가 미 유력 언론의 모의 신인왕 투표에서 4위에... \u003cb\u003e이대호\u003c/b\u003e는 아메리칸리그 신인앙 투표에서 4위에 올랐다. 1위에 5점, 2위에 3점, 3위에 1점을 주는 방식으로 진행된... ",
+					"pubDate": "Wed, 20 Jul 2016 05:55:00 +0900",
+					"title": "\u003cb\u003e이대호\u003c/b\u003e, USA투데이 신인왕 투표 4위"
+				},
+				{
+					"link": "http://openapi.naver.com/l?AAAC2LywrCMBREv+Z2WW6TNiSLLEwfggiCVlwHGxvBNjVNK/17IwjDzGGGeS/GbxLqEkQFKodaAS+BI9QVCA6KJ9abh7QhTEB3QJqoeXI+zOloPtH0anx6d0PsezMar1+RflMMb3SXjnYE2rhnB7RCLIAw/WdEQRDzLAkyyxkXjDCBhPFkkIzx9QZEHZU7bOLa9sX+QpfTGVur63j+AoGfZGC3AAAA",
+					"description": "\u003cb\u003e이대호\u003c/b\u003e(34·시애틀 매리너스)와 박병호(30·미네소타 트윈스) 얘기다. \u003cb\u003e이대호\u003c/b\u003e는 대기만성(大器晩成)형 성장곡선을 그린 반면, 박병호는 마이너리거로 전락해 용두사미(龍頭蛇尾)로 점철됐다. \u003cb\u003e이대호\u003c/b\u003e는 19일 미국... ",
+					"pubDate": "Tue, 19 Jul 2016 18:24:00 +0900",
+					"title": "위상 역전된 코리안 메이저리거 두 거포 ‘\u003cb\u003e이대호\u003c/b\u003e·박병호’",
+					"originallink": "http://news.kmib.co.kr/article/view.asp?arcid=0923589497\u0026code=12110000\u0026cp=nv"
+				}
+			],
 			"title": "Naver Open API - news ::'이대호'",
 			"link": "http://search.naver.com",
-			"description": "Naver Search Result",
-			"lastBuildDate": "Mon, 18 Jul 2016 18:28:50 +0900",
-			"total": "163423",
-			"start": "1"
+			"description": "Naver Search Result"
 		}
 	}
 }

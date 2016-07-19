@@ -14,7 +14,7 @@ func renderTemplate(w http.ResponseWriter, tmpl string, p interface{}) {
 	}
 }
 
-var templates = template.Must(template.ParseFiles("index.html"))
+var templates = template.Must(template.ParseFiles("index.html", "web/contents.html"))
 
 type StaticHandler struct {
 	http.Handler

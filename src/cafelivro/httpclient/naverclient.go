@@ -14,12 +14,12 @@ const (
 
 func Execute() {
 	println("execute")
-	xml, statuscode := GetNaverSearchResultXml("news", "이대호", "1", "1", "sim")
+	xml, statuscode := GetNaverSearchResultXml("news", "이대호", "1", "2", "sim")
 
 	println(statuscode)
 	println("xml", xml)
 
-	json, statuscode2 := GetNaverSearchResultJson("news", "이대호", "1", "1", "sim")
+	json, statuscode2 := GetNaverSearchResultJson("news", "이대호", "1", "2", "sim")
 
 	println(statuscode2)
 	println("json", json)

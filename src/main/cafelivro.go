@@ -1,6 +1,7 @@
 package main
 
 import (
+	//"cafelivro/httpclient"
 	"cafelivro/web"
 	"net/http"
 	"os"
@@ -8,14 +9,18 @@ import (
 
 func main() {
 
+	//httpclient.Execute()
+
 	port := os.Getenv("PORT")
-	port = "8080"
+	//port = "8080"
 
 	http.Handle("/css/", new(web.StaticHandler))
 	http.Handle("/fonts/", new(web.StaticHandler))
 	http.Handle("/js/", new(web.StaticHandler))
+	http.Handle("/web/", new(web.StaticHandler))
 	http.HandleFunc("/", web.IndexHandler)
 	http.HandleFunc("/news/", web.NewsHandler)
+	//http.HandleFunc("/contents/", web.ContentsHandler)
 	http.ListenAndServe(":"+port, nil)
 
 }
