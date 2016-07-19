@@ -57,33 +57,17 @@
 			setTimeout( function() { classie.add( perspectiveWrapper, 'animate' ); }, 25 );
 		});
 
-		container.addEventListener( clickevent, function( ev ) {
-			if( classie.has( perspectiveWrapper, 'animate') ) {
-				var onEndTransFn = function( ev ) {
-					if( support && ( ev.target.className !== 'container' || ev.propertyName.indexOf( 'transform' ) == -1 ) ) return;
-					this.removeEventListener( transEndEventName, onEndTransFn );
-					classie.remove( perspectiveWrapper, 'modalview' );
-					// mac chrome issue:
-					document.body.scrollTop = document.documentElement.scrollTop = docscroll;
-					// change top of contentWrapper
-					contentWrapper.style.top = '0px';
-				};
-				if( support ) {
-					perspectiveWrapper.addEventListener( transEndEventName, onEndTransFn );
-				}
-				else {
-					onEndTransFn.call();
-				}
-				classie.remove( perspectiveWrapper, 'animate' );
-			}
-		});
+		container.addEventListener( clickevent, returnHome);
 		
-		
-		
-		// 뉴스 메뉴 클릭 추가 한다  !!!!!!!
+		var  home = document.getElementById( 'home' );
+		home.addEventListener( clickevent, returnHome);
 		var  news = document.getElementById( 'news' );
-		news.addEventListener( clickevent, function( ev ) {
-			alert("news");
+		news.addEventListener( clickevent, returnHome);
+		var  blog = document.getElementById( 'blog' );
+		blog.addEventListener( clickevent, returnHome);
+		
+		function returnHome(ev){
+			
 			if( classie.has( perspectiveWrapper, 'animate') ) {
 				var onEndTransFn = function( ev ) {
 					if( support && ( ev.target.className !== 'container' || ev.propertyName.indexOf( 'transform' ) == -1 ) ) return;
@@ -102,8 +86,7 @@
 				}
 				classie.remove( perspectiveWrapper, 'animate' );
 			}
-		});
-		
+		}
 
 		perspectiveWrapper.addEventListener( clickevent, function( ev ) { return false; } );
 	}
