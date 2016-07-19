@@ -19,6 +19,8 @@ func Execute() {
 	println(statuscode)
 	println("xml", xml)
 
+	// bug
+
 	//	json, statuscode2 := GetNaverSearchResultJson("news", "이대호", "1", "2", "sim")
 	//
 	//	println(statuscode2)
