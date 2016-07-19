@@ -9,7 +9,7 @@ import (
 func main() {
 
 	port := os.Getenv("PORT")
-	port = "80"
+	port = "8080"
 
 	http.Handle("/css/", new(web.StaticHandler))
 	http.Handle("/fonts/", new(web.StaticHandler))
