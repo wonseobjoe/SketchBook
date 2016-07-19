@@ -1,7 +1,7 @@
 package httpclient
 
 import (
-	xj "github.com/basgys/goxml2json"
+	//xj "github.com/basgys/goxml2json"
 	"io/ioutil"
 	"net/http"
 )
@@ -19,10 +19,10 @@ func Execute() {
 	println(statuscode)
 	println("xml", xml)
 
-	json, statuscode2 := GetNaverSearchResultJson("news", "이대호", "1", "2", "sim")
-
-	println(statuscode2)
-	println("json", json)
+	//	json, statuscode2 := GetNaverSearchResultJson("news", "이대호", "1", "2", "sim")
+	//
+	//	println(statuscode2)
+	//	println("json", json)
 
 }
 
@@ -41,6 +41,7 @@ func GetNaverSearchResultXml(scope string, keyWord string, startNum string, disp
 	return "", resp.StatusCode
 }
 
+/*
 func GetNaverSearchResultJson(scope string, keyWord string, startNum string, displayNum string, sortType string) (string, int) {
 	resp, err := GetNaverSearchResult(scope, keyWord, startNum, displayNum, sortType)
 
@@ -55,6 +56,7 @@ func GetNaverSearchResultJson(scope string, keyWord string, startNum string, dis
 	return "", resp.StatusCode
 
 }
+*/
 
 func GetNaverSearchResult(scope string, keyWord string, startNum string, displayNum string, sortType string) (resp *http.Response, err error) {
 
