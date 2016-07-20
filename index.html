@@ -6,62 +6,87 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Perspective Page View Navigation</title>
 <meta name="description" content={{.Body}} />
-<meta name="keywords"
-	content="Go, google,java,book cafe, navigation, mobile, , css transform, web development" />
+<meta name="keywords" content="Go, google,java,book cafe, navigation, mobile, , css transform, web development" />
 <meta name="author" content="slowtrain" />
 <link rel="shortcut icon" href="../favicon.ico">
+<!-- menu   -->
 <link rel="stylesheet" type="text/css" href="/css/normalize.css" />
 <link rel="stylesheet" type="text/css" href="/css/demo.css" />
 <link rel="stylesheet" type="text/css" href="/css/component.css" />
-
-   <link rel="stylesheet" href="/css/themes/sunny/jquery-ui.css">
-   <link rel="stylesheet" href="/css/themes/sunny/theme.css">
-
-
-<!-- csstransforms3d-shiv-cssclasses-prefixed-teststyles-testprop-testallprops-prefixes-domprefixes-load -->
 <script src="/js/modernizr.custom.25376.js"></script>
+<!-- jquery  -->
+<link rel="stylesheet" href="/css/themes/ui-lightness/jquery-ui.css">
+<link rel="stylesheet" href="/css/themes/ui-lightness/theme.css">
 <script src="/js/jquery-3.1.0.js"></script>
- <script src="/js/jquery-ui.js"></script>
-
-<script type="text/javascript" language="javascript">
+<script src="/js/jquery-ui.js"></script>
 
 
+<script type="text/javascript" >
 
-	$(document).ready(
-			function() {
+
+$(document).ready(function() {
+	
+	$.news = function (keyword) {
+		
+		$.ajax({
+			type : "get",
+			dataType : "xml",
+			url : encodeURI("/news/?keyword="+keyword),
+			encoding:"UTF-8",
+			success : function(xml) {
+				$('#contents').html('');
+				$item = $(xml).find('item');
+				$item.each(function() {
+					$('#contents').append('<h3>'+ $(this).find('title').text()+ '</h3>');
+					$('#contents').append('<div>'+ $(this).find('description').text()+ '</div>');				
+				});
 				
-				
-				$("#home").click(function(event) {
+				$("#contents").accordion("destroy");
+				$("#contents").accordion();
+			},
+			error : function() {
+				alert("xml error!!");
+			}
+		});
+	}
+	
+	$("#contents").accordion();
+	$.news("박근혜");
+	
+    $("#home").click(function(event) {
 
-				});
+    });
+    
+    $("#news").click(function(event){
+    	//$("#news").news("이대호");
+    	$.news("김대중");
+    });
+    
+    $("#blog").click(function(event) {
+    	$.getJSON('/blog/', function(jd) {
+    		$('#contents').html('<p> Name: ' + jd.name + '</p>');
+    		$('#contents').append('<p>Age : ' + jd.age + '</p>');
+    		$('#contents').append('<p> Sex: ' + jd.sex + '</p>');
+    	});
+    });
+});
 
-				$("#news").click(function(event) {
-					$( "#contents" ).accordion();
-					$.ajax({
-						   type: "get"
-						   ,dataType: "xml"
-						   ,url: "/news/"
-						   ,success: function(xml){
-							   $('#contents').html('');
-							    $item=$(xml).find('item');
-								$item.each(function(){
-									$('#contents').append('<h3>' + $(this).find('title').text() + '</h3>');
-									$('#contents').append('<div><p>' + $(this).find('description').text()+ '</p></div>');
-								});
-						    }
-						    ,error: function(){ alert("xml error!!"); }
-						 }); 
-				});
 
-				$("#blog").click(function(event) {
-					$.getJSON('/blog/', function(jd) {
-						$('#contents').html('<p> Name: ' + jd.name + '</p>');
-						$('#contents').append('<p>Age : ' + jd.age + '</p>');
-						$('#contents').append('<p> Sex: ' + jd.sex + '</p>');
-					});
-					
-				});
-			});
+
+
+
+
+	
+	
+function news(keyword) {
+	
+};
+			
+			
+			
+			
+		
+
 </script>
 
 </head>
@@ -73,8 +98,7 @@
 				<!-- Top Navigation -->
 				<div class="codrops-top clearfix">
 					<a class="codrops-icon codrops-icon-prev" href="http://daum.net"><span>daum</span></a>
-					<span class="right"><a
-						class="codrops-icon codrops-icon-drop" href="http://naver.com"><span>naver</span></a></span>
+					<span class="right"><a class="codrops-icon codrops-icon-drop" href="http://naver.com"><span>naver</span></a></span>
 				</div>
 				<header class="codrops-header">
 					<h1>
@@ -82,19 +106,24 @@
 					</h1>
 				</header>
 				<div class="main clearfix">
-					<div class="column">
-						<p>
-							<button id="showMenu">Show Menu</button>
-						</p>
-						<p>Go is an open source programming language that makes it
-							easy to build simple, reliable, and efficient software</p>
-					</div>
 
+					
+					<div id="menu">
+						<div class="menucontent"> 
+							<button id="showMenu">Show Menu</button>
+						</div>
+						<div id="menucontent">
+							<h3>Go is an open source programming language that makes it 
+							easy to build simple, reliable, and efficient software
+							</h3>
+						</div>
+					
+					</div>
+					
 					<div id="contents"  type="hidden">
-										
+
 						<h2>
-							em breve .. <br> <br> comming Soon .. <br> <br>
-							곧 찾아갑니다 ..
+							em breve ..  comming Soon ..  곧 찾아갑니다 ..
 						</h2>
 
 						<!--
@@ -123,11 +152,12 @@
 		</div>
 		<!-- /container -->
 		<nav class="outer-nav right vertical">
-			<a href="javascript:;" id="home" class="icon-home">Home</a> <a
-				href="javascript:;" id="news" class="icon-news">News</a> <a
-				href="javascript:;" id="blog" class="icon-image">Blog</a> <a
-				href="#" class="icon-upload">Uploads</a> <a href="#"
-				class="icon-star">Favorites</a> <a href="#" class="icon-mail">Messages</a>
+			<a href="javascript:;" id="home" class="icon-home">Home</a> 
+			<a href="javascript:;" id="news" class="icon-news">News</a> 
+			<a href="javascript:;" id="blog" class="icon-image">Blog</a> 
+			<a href="#" class="icon-upload">Uploads</a> 
+			<a href="#" class="icon-star">Favorites</a> 
+			<a href="#" class="icon-mail">Messages</a>
 			<a href="#" class="icon-lock">Security</a>
 		</nav>
 	</div>

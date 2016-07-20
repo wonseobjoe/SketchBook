@@ -12,7 +12,10 @@ func IndexHandler(writer http.ResponseWriter, req *http.Request) {
 }
 
 func NewsHandler(writer http.ResponseWriter, req *http.Request) {
-	resp, _ := httpclient.GetNaverSearchResult("news", "이대호", "1", "10", "sim")
+	query := req.URL.Query()
+	keyword := query.Get("keyword")
+	println("keyword : ", keyword)
+	resp, _ := httpclient.GetNaverSearchResult("news", keyword, "1", "10", "sim")
 
 	if resp.StatusCode == 200 {
 		bytes, _ := ioutil.ReadAll(resp.Body)

@@ -12,7 +12,7 @@ func main() {
 	//httpclient.Execute()
 
 	port := os.Getenv("PORT")
-	//port = "8080"
+	port = "8080"
 
 	http.Handle("/css/", new(web.StaticHandler))
 	http.Handle("/fonts/", new(web.StaticHandler))
