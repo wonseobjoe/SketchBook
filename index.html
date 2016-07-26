@@ -53,7 +53,7 @@ $(document).ready(function() {
 						title=title+date.getFullYear()+"."+date.getMonth()+"."+date.getDate()+" "+date.getHours()+":"+date.getMinutes()
 					}	
 					title=title + "</h3>";
-					contents = "<div>"+$(this).find("description").text()+"<br> <a href=\"javascript:window.open('"+$(this).find("link").text()+"')\"> 바로가기 </a></div>";
+					contents = "<div>"+$(this).find("description").text()+"<br> <a href=\"javascript:window.open('"+$(this).find("link").text()+"');void(0);\"> 바로가기 </a></div>";
 					$('#contents').append(title);
 					$('#contents').append(contents);
 				});
@@ -82,31 +82,31 @@ $(document).ready(function() {
     
     $("#news").click(function(event){
     	$("#scope").val("news");
-    	$("#searchButton").text("news "+"검색");
+    	$("#searchButton").text("news "+"search");
     	$.search();
     });
     
     $("#blog").click(function(event){
     	$("#scope").val("blog");
-    	$("#searchButton").text("blog "+"검색");
+    	$("#searchButton").text("blog "+"search");
     	$.search();
     });
     
     $("#kin").click(function(event){
     	$("#scope").val("kin");
-    	$("#searchButton").text("지식인 "+"검색");
+    	$("#searchButton").text("kin "+"search");
     	$.search();
     });
     
     $("#ency").click(function(event){
     	$("#scope").val("ency");
-    	$("#searchButton").text("백과사전 "+"검색");
+    	$("#searchButton").text("ency "+"search");
     	$.search();
     });
     
     $("#cafearticle").click(function(event){
     	$("#scope").val("cafearticle");
-    	$("#searchButton").text("카페 "+"검색");
+    	$("#searchButton").text("cafe "+"search");
     	$.search();
     });
     
@@ -175,16 +175,16 @@ $(document).ready(function() {
 					</div>
 					
 					<div id="search">
-						<button id="prevButton" style="position: absolute;margin-left: 3em">이전</button>
+						<button id="prevButton" style="position: absolute;margin-left: 3em">previous</button>
 						<input id="scope" type="hidden" value="news">
 						<input id="pagenum" type="hidden" value="1" size="3">
-						정렬 : 
-						<input id="radio1" name="sort" type="radio" value="sim" checked="checked"> 유사도
-						<input id="radio2" name="sort" type="radio" value="date"> 날짜
+						sort : 
+						<input id="radio1" name="sort" type="radio" value="sim" checked="checked"> similarity
+						<input id="radio2" name="sort" type="radio" value="date"> date
 						<input id="keyword" type="text" value="현재 날씨" size="30" maxlength="20" autofocus="autofocus" >
-						<button id="searchButton">news 검색</button>
+						<button id="searchButton">news search</button>
 						|
-						<button id="nextButton">다음</button>
+						<button id="nextButton">next</button>
 					</div>
 					<div id="contents"  type="hidden">
 
