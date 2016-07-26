@@ -49,7 +49,7 @@ a:hover, a:focus {
 }
 
 .codrops-header {
-	margin: 0 auto 3em;
+	/* margin: 0 auto 3em; */
 	padding: 3em;
 	text-align: center;
 }
@@ -58,7 +58,7 @@ a:hover, a:focus {
 	margin: 0;
 	font-weight: 300;
 	font-size: 2.625em;
-	line-height: 1.3;
+	 line-height: 1.3;
 }
 
 .codrops-header span {
@@ -145,54 +145,6 @@ a:hover, a:focus {
 	margin: 0;
 	line-height: 1.5;
 }
-
-#menu {
-	/* float: left; */
-	width: 100%;
-	padding: 2em;
-	min-height: 100px;
-	position: relative;
-	text-align: left;
-}
-
-.menucontent {
-
-	font-size: 2em;
-	padding: 0 0 0.5em;
-	margin: 30;
-	line-height: 1.5;
-	float: left;
-	position: relative;
-	text-align: left;
-}
-
-
-
-
-
-#contents {
-	/* float: left; */
-	width: 100%;
-	padding: 0 2em;
-	min-height: 300px;
-	position: relative;
-	text-align: center;
-}
-
-
-
-
-#contents p {
-	font-weight: 300;
-	font-size: 2em;
-	padding: 0 0 0.5em;
-	margin: 0;
-	line-height: 1.5;
-}
-
-
-
-
 
 .codrops-demos a,
 button {

@@ -1,0 +1,50 @@
+
+#contents {
+	/* float: left; */
+	width: 100%;
+	padding: 0 2em;
+	min-height: 300px;
+	position: relative;
+	text-align: center;
+}
+
+#search {
+	/* float: left; */
+	width: 100%;
+	padding-right: 2em;
+	position: relative;
+	text-align: right;
+}
+
+
+
+
+#contents p {
+	font-weight: 300;
+	font-size: 2em;
+	padding: 0 0 0.5em;
+	margin: 0;
+	line-height: 1.5;
+}
+
+
+#menu {
+	/* float: left; */
+	width: 100%;
+	padding: 2em;
+	min-height: 30px;
+	position: relative;
+	text-align: left;
+}
+
+
+.menucontent {
+
+	font-size: 2em;
+	padding: 0 0 0.5em;
+	margin: 30;
+	line-height: 1.5;
+	float: left;
+	position: relative;
+	text-align: left;
+}

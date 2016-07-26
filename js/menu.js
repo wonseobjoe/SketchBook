@@ -66,6 +66,13 @@
 		var  blog = document.getElementById( 'blog' );
 		blog.addEventListener( clickevent, returnHome);
 		
+		var  kin = document.getElementById( 'kin' );
+		kin.addEventListener( clickevent, returnHome);
+		var  blog = document.getElementById( 'ency' );
+		ency.addEventListener( clickevent, returnHome);
+		var  blog = document.getElementById( 'cafearticle' );
+		cafearticle.addEventListener( clickevent, returnHome);
+		
 		function returnHome(ev){
 			
 			if( classie.has( perspectiveWrapper, 'animate') ) {

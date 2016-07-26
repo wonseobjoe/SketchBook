@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Perspective Page View Navigation</title>
+<title>CafeLivro</title>
 <meta name="description" content={{.Body}} />
 <meta name="keywords" content="Go, google,java,book cafe, navigation, mobile, , css transform, web development" />
 <meta name="author" content="slowtrain" />
@@ -21,24 +21,41 @@
 <script src="/js/jquery-ui.js"></script>
 
 
-<script type="text/javascript" >
+<link rel="stylesheet" type="text/css" href="/css/cafelivro.css" />
 
+
+<script type="text/javascript" >
 
 $(document).ready(function() {
 	
-	$.news = function (keyword) {
+	$.search = function () {
 		
+    	var scope=$("#scope").val();
+    	var pagenum=$("#pagenum").val();
+		var sort = $("input:radio[name='sort']:checked").val(); // 체크되어 있는 값
+		var keyword=$("#keyword").val();
+			
 		$.ajax({
 			type : "get",
 			dataType : "xml",
-			url : encodeURI("/news/?keyword="+keyword),
+			url : encodeURI("/search/?scope="+scope+"&keyword="+keyword+"&pagenum="+pagenum+"&sort="+sort),
 			encoding:"UTF-8",
 			success : function(xml) {
 				$('#contents').html('');
 				$item = $(xml).find('item');
+				var title="";
+				var contents="";
+				var date = new Date();
 				$item.each(function() {
-					$('#contents').append('<h3>'+ $(this).find('title').text()+ '</h3>');
-					$('#contents').append('<div>'+ $(this).find('description').text()+ '</div>');				
+					title = "<h3>"+ $(this).find("title").text()+"&nbsp;&nbsp;&nbsp;"					
+					if($(this).find("pubDate").text()!=""){
+						date= new Date($(this).find("pubDate").text());
+						title=title+date.getFullYear()+"."+date.getMonth()+"."+date.getDate()+" "+date.getHours()+":"+date.getMinutes()
+					}	
+					title=title + "</h3>";
+					contents = "<div>"+$(this).find("description").text()+"<br> <a href=\"javascript:window.open('"+$(this).find("link").text()+"')\"> 바로가기 </a></div>";
+					$('#contents').append(title);
+					$('#contents').append(contents);
 				});
 				
 				$("#contents").accordion("destroy");
@@ -48,44 +65,79 @@ $(document).ready(function() {
 				alert("xml error!!");
 			}
 		});
-	}
+	};
+	
 	
 	$("#contents").accordion();
-	$.news("박근혜");
+	$.search();
 	
     $("#home").click(function(event) {
+    	$("#scope").val("news");
+    	$("#keyword").val("현재 날씨");
+    	$("#pagenum").val("1");
+    	$("input:radio[name='sort']:radio[value='sim']").attr('checked', true);
+    	$.search();
 
     });
     
     $("#news").click(function(event){
-    	//$("#news").news("이대호");
-    	$.news("김대중");
+    	$("#scope").val("news");
+    	$("#searchButton").text("news "+"검색");
+    	$.search();
     });
     
-    $("#blog").click(function(event) {
-    	$.getJSON('/blog/', function(jd) {
-    		$('#contents').html('<p> Name: ' + jd.name + '</p>');
-    		$('#contents').append('<p>Age : ' + jd.age + '</p>');
-    		$('#contents').append('<p> Sex: ' + jd.sex + '</p>');
-    	});
+    $("#blog").click(function(event){
+    	$("#scope").val("blog");
+    	$("#searchButton").text("blog "+"검색");
+    	$.search();
     });
+    
+    $("#kin").click(function(event){
+    	$("#scope").val("kin");
+    	$("#searchButton").text("지식인 "+"검색");
+    	$.search();
+    });
+    
+    $("#ency").click(function(event){
+    	$("#scope").val("ency");
+    	$("#searchButton").text("백과사전 "+"검색");
+    	$.search();
+    });
+    
+    $("#cafearticle").click(function(event){
+    	$("#scope").val("cafearticle");
+    	$("#searchButton").text("카페 "+"검색");
+    	$.search();
+    });
+    
+    $("#searchButton").click(function(event) {
+    	$.search();
+    });
+    
+    $("#prevButton").click(function(event) {
+    	var pagenum=parseInt($("#pagenum").val());
+    	if(pagenum>1){
+    		$("#pagenum").val(pagenum-1);
+    		$.search();
+    	}
+    });
+    
+    $("#nextButton").click(function(event) {
+    	var pagenum=parseInt($("#pagenum").val());
+    	$("#pagenum").val(pagenum+1);
+    	$.search();
+    });
+    
+    
+    $("#keyword").keypress(function(event){
+        if (event.keyCode === 10 || event.keyCode === 13){
+        	$.search();
+        };
+    });
+    
 });
 
-
-
-
-
-
-	
-	
-function news(keyword) {
-	
-};
-			
-			
-			
-			
-		
+					
 
 </script>
 
@@ -96,10 +148,12 @@ function news(keyword) {
 			<div class="wrapper">
 				<!-- wrapper needed for scroll -->
 				<!-- Top Navigation -->
+				<!-- 
 				<div class="codrops-top clearfix">
 					<a class="codrops-icon codrops-icon-prev" href="http://daum.net"><span>daum</span></a>
 					<span class="right"><a class="codrops-icon codrops-icon-drop" href="http://naver.com"><span>naver</span></a></span>
 				</div>
+				-->
 				<header class="codrops-header">
 					<h1>
 						{{.Title}} <span>{{printf "%s" .Body}}</span>
@@ -120,6 +174,18 @@ function news(keyword) {
 					
 					</div>
 					
+					<div id="search">
+						<button id="prevButton" style="position: absolute;margin-left: 3em">이전</button>
+						<input id="scope" type="hidden" value="news">
+						<input id="pagenum" type="hidden" value="1" size="3">
+						정렬 : 
+						<input id="radio1" name="sort" type="radio" value="sim" checked="checked"> 유사도
+						<input id="radio2" name="sort" type="radio" value="date"> 날짜
+						<input id="keyword" type="text" value="현재 날씨" size="30" maxlength="20" autofocus="autofocus" >
+						<button id="searchButton">news 검색</button>
+						|
+						<button id="nextButton">다음</button>
+					</div>
 					<div id="contents"  type="hidden">
 
 						<h2>
@@ -139,7 +205,7 @@ function news(keyword) {
 					</div>
 					<div class="related">
 
-						<p>Designed by GO Language</p>
+						<p>Designed by Slowtrain with Go Language</p>
 						<!--
 							<p><a href="http://tympanus.net/Tutorials/AnimatedBorderMenus/">Animated Border Menus</a></p>
 							<p><a href="http://tympanus.net/Development/SidebarTransitions/">Transitions for Off-Canvas Navigations</a></p>
@@ -154,11 +220,10 @@ function news(keyword) {
 		<nav class="outer-nav right vertical">
 			<a href="javascript:;" id="home" class="icon-home">Home</a> 
 			<a href="javascript:;" id="news" class="icon-news">News</a> 
-			<a href="javascript:;" id="blog" class="icon-image">Blog</a> 
-			<a href="#" class="icon-upload">Uploads</a> 
-			<a href="#" class="icon-star">Favorites</a> 
-			<a href="#" class="icon-mail">Messages</a>
-			<a href="#" class="icon-lock">Security</a>
+			<a href="javascript:;" id="blog" class="icon-image">Blog</a>
+			<a href="javascript:;" id="kin" class="icon-image">지식인</a>
+			<a href="javascript:;" id="ency" class="icon-image">백과사전</a>
+			<a href="javascript:;" id="cafearticle" class="icon-image">카페</a>    
 		</nav>
 	</div>
 	<!-- /perspective -->

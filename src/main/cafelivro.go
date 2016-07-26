@@ -19,7 +19,7 @@ func main() {
 	http.Handle("/js/", new(web.StaticHandler))
 	http.Handle("/web/", new(web.StaticHandler))
 	http.HandleFunc("/", web.IndexHandler)
-	http.HandleFunc("/news/", web.NewsHandler)
+	http.HandleFunc("/search/", web.SearchHandler)
 	//http.HandleFunc("/contents/", web.ContentsHandler)
 	http.ListenAndServe(":"+port, nil)
 
